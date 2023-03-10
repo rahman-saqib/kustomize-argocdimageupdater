@@ -16,5 +16,6 @@ spec:
       containers:
       - image: docker.io/rahmansdocker/kubia:0.1
         name: guestbook-ui
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
