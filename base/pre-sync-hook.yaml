@@ -8,5 +8,5 @@ spec:
       containers:
       - name: tree-container
         image: ubuntu
-        command: ["bash", "-c", "apt-get update && apt-get install -y tree && tree && sleep 200"]
+        command: ["bash", "-c", "apt-get update && apt-get install -y tree && tree && sleep 250"]
       restartPolicy: Never
