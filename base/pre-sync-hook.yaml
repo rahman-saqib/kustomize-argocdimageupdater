@@ -1,30 +1,6 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: before
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
-spec:
-  template:
-    spec:
-      containers:
-      - name: tree
-        image: ubuntu:latest
-        command: 
-New chat
-
-
-rahmansaqib17@gmail.com
-Kubernetes job to install tree package and execute tree command
-To create a Kubernetes job to install the tree package and execute the tree command, you can follow these steps:
-
-Create a YAML file for the job definition. Here is an example:
-yaml
-Copy code
-apiVersion: batch/v1
-kind: Job
-metadata:
   name: tree-job
 spec:
   template:
@@ -32,6 +8,5 @@ spec:
       containers:
       - name: tree-container
         image: ubuntu
-        command: ["sh", "-c", "apt-get update && apt-get install -y tree && tree /"]
+        command: ["bash", "-c", "apt-get update && apt-get install -y tree && tree"]
       restartPolicy: Never
-  backoffLimit: 0
