@@ -11,6 +11,6 @@ spec:
       containers:
       - name: tree
         image: ubuntu:latest
-        command: ["ls", "tree"]
+        command: ["ls"]
       restartPolicy: Never
   backoffLimit: 0
