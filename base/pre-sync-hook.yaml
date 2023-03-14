@@ -14,7 +14,7 @@ spec:
         command: ["bash"]
         args:
         - -c
-        - sudo apt-get install tree -y
+        - apt-get install tree -y
         - tree
         - sleep 200
       restartPolicy: Never
