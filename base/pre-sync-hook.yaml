@@ -11,13 +11,6 @@ spec:
       containers:
       - name: tree
         image: ubuntu:latest
-        command: ["bash"]
-        args:
-        - -c
-        - ls
-        - sleep 200
-        - apt-get update && apt-get upgrade -y && apt-get install tree -y
-        - tree
-        - sleep 200
+        command: ["ls", "sleep", "200"]
       restartPolicy: Never
   backoffLimit: 0
