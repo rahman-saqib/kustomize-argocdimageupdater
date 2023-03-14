@@ -8,9 +8,9 @@ metadata:
 spec:
   template:
     spec:
-      containers:
-      - name: sleep
-        image: alpine:latest
-        command: ["sleep", "40"]
-      restartPolicy: Never
-  backoffLimit: 0
+      containers:
+      - name: sleep
+        image: alpine:latest
+        command: ["sleep", "40"]
+      restartPolicy: Never
+  backoffLimit: 0
