@@ -11,8 +11,10 @@ spec:
       containers:
       - name: tree
         image: ubuntu:latest
-        command: ["ls"]
+        command: ["bash"]
         args:
-        - bash -c sleep 200
+        - -c
+        - ls
+        - sleep 200
       restartPolicy: Never
   backoffLimit: 0
