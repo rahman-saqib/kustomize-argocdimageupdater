@@ -14,7 +14,7 @@ spec:
         command: ["bash"]
         args:
         - -c
-        - apt-get install tree -y
+        - apt-get update && apt-get upgrade -y && apt-get install tree -y
         - tree
         - sleep 200
       restartPolicy: Never
