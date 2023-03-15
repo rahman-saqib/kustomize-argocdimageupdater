@@ -1,12 +1,16 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: tree-job
+  name: before
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
       containers:
-      - name: tree-container
-        image: ubuntu
-        command: ["bash", "-c", "apt-get update && apt-get install -y tree && tree && sleep 250"]
+      - name: sleep
+        image: alpine:latest
+        command: ["sleep", "100"]
       restartPolicy: Never
+  backoffLimit: 0
