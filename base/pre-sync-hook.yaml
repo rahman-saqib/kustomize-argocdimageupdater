@@ -14,6 +14,6 @@ spec:
         args:
         - /bin/sh
         - -c
-        - curl -o base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
+        - curl -o test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
       restartPolicy: Never
   backoffLimit: 0
