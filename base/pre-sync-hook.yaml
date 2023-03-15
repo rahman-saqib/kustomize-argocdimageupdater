@@ -16,7 +16,6 @@ spec:
         - -c
         - apt-get update
         - apt-get install curl -y
-        - touch base/test.env
-        - curl https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env >> base/test.env
+        - curl -o /tmp/_argocd-repo/*/base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
       restartPolicy: Never
   backoffLimit: 0
