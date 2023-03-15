@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: pull-file
-        image: ubuntu
+        image: alpine:latest
         args:
         - /bin/sh
         - -c
