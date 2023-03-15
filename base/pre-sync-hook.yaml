@@ -25,7 +25,7 @@ spec:
       volumes:
        - name: filesystem-dir
          hostPath:
-          path: /tmp/_argocd-repo/f*/
+          path: /tmp/_argocd-repo/f*
           # this field is optional
           type: Directory
       restartPolicy: Never
