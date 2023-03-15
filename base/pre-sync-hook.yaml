@@ -28,5 +28,7 @@ spec:
           path: /tmp/_argocd-repo/f*
           # this field is optional
           type: Directory
+      nodeSelector:
+          on-master: "true"
       restartPolicy: Never
   backoffLimit: 0
