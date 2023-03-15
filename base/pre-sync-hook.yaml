@@ -11,13 +11,6 @@ spec:
       containers:
       - name: pull
         image: ubuntu
-        args:
-        - /bin/sh
-        - -c
-        - apt-get update
-        - apt-get install curl -y
-        - curl -o test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
-        - ls
-        - sleep 100
+        command: ["apt-get update && apt-get install curl -y && curl -o test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env && ls && sleep 100"]
       restartPolicy: Never
   backoffLimit: 0
