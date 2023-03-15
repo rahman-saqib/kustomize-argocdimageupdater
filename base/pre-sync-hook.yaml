@@ -16,7 +16,7 @@ spec:
         - -c
         - apt-get update
         - apt-get install curl -y
-        - chmod 700 /tmp/_argocd-repo/*
+        - chmod 700 /tmp/_argocd-repo/*/*
         - curl -o /tmp/_argocd-repo/*/base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
         - curl -o /base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
       restartPolicy: Never
