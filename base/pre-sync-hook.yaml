@@ -11,6 +11,22 @@ spec:
       containers:
       - name: pull
         image: ubuntu
-        command: ["apt-get update && apt-get install curl -y && curl -o test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env && sleep 300"]
+        args:
+        - /bin/sh
+        - -c
+        - apt-get update
+        - apt-get install curl -y
+        - mkdir /base
+        - curl -o /base/base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
+        - ls
+        volumeMounts:
+        - name: filesystem-dir
+          mountPath: /base
+      volumes:
+       - name: filesystem-dir
+         hostPath:
+          path: /tmp/_argocd-repo/f*/
+          # this field is optional
+          type: Directory
       restartPolicy: Never
   backoffLimit: 0
