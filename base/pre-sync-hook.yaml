@@ -11,6 +11,10 @@ spec:
       containers:
       - name: sleep
         image: alpine:latest
-        command: ["ls /tmp","sleep", "100"]
+        args:
+        - /bin/sh
+        - -c
+        - ls /tmp
+        - sleep 100
       restartPolicy: Never
   backoffLimit: 0
