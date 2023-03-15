@@ -9,12 +9,11 @@ spec:
   template:
     spec:
       containers:
-      - name: sleep
-        image: alpine:latest
+      - name: pull file
+        image: ubuntu
         args:
         - /bin/sh
         - -c
-        - ls /tmp
-        - sleep 100
+        - curl -o test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
       restartPolicy: Never
   backoffLimit: 0
