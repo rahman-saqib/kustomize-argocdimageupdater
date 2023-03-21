@@ -13,6 +13,9 @@ spec:
       - name: pull
         image: ubuntu
         args:
+        - /bin/sh
+        - -c
+        - echo "working"
         - apt-get update
         - apt-get install curl -y
         - mkdir base2
