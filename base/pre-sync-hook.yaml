@@ -16,12 +16,12 @@ spec:
         args:
         - |
           /bin/sh
-        - echo "working"
-        - apt-get update
-        - apt-get install curl -y
-        - mkdir base2
-        - curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
-        - ls base2
-        - sleep 200
+          echo "working"
+          apt-get update
+          apt-get install curl -y
+          mkdir base2
+          curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
+          ls base2
+          sleep 200
       restartPolicy: Never
   backoffLimit: 0
