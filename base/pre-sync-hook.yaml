@@ -7,7 +7,14 @@ metadata:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
+  manualSelector: true
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: "argocd-repo-server"
   template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: "argocd-repo-server"
     spec:
       containers:
       - name: pull
@@ -21,6 +28,7 @@ spec:
           mkdir base2
           curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
           ls base2
+          cp base2/test.env /tmp
           sleep 600
       restartPolicy: Never
   backoffLimit: 0
