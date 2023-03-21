@@ -15,7 +15,6 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
         - |
-          /bin/sh
           echo "working"
           apt-get update
           apt-get install curl -y
