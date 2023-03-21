@@ -12,9 +12,10 @@ spec:
       containers:
       - name: pull
         image: ubuntu
+        command: ["/bin/sh", "-c"]
         args:
-        - /bin/sh
-        - -c
+        - |
+          /bin/sh
         - echo "working"
         - apt-get update
         - apt-get install curl -y
