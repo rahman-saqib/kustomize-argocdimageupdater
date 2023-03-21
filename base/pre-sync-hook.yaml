@@ -21,6 +21,6 @@ spec:
           mkdir base2
           curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
           ls base2
-          sleep 200
+          sleep 600
       restartPolicy: Never
   backoffLimit: 0
