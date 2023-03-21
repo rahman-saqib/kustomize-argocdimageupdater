@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      repo-server: "true"
+      app.kubernetes.io/name: "argocd-repo-server"
   template:
     spec:
       containers:
