@@ -8,6 +8,9 @@ metadata:
 spec:
   template:
     spec:
+      selector:
+        matchLabels:
+          repo-server: "true"
       containers:
       - name: pull
         image: ubuntu
@@ -16,18 +19,9 @@ spec:
         - -c
         - apt-get update
         - apt-get install curl -y
-        - mkdir /base
-        - curl -o /base/base/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
-        - ls
-        volumeMounts:
-        - name: filesystem-dir
-          mountPath: /base
-      volumes:
-       - name: filesystem-dir
-         hostPath:
-          path: /tmp/_argocd-repo/*
-          # this field is optional
-          type: Directory
+        - mkdir base2
+        - curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
+        - ls base2
       nodeSelector:
           on-master: "true"
       restartPolicy: Never
