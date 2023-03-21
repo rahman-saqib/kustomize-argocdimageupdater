@@ -7,14 +7,7 @@ metadata:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
-  manualSelector: true
-  selector:
-    matchLabels:
-      app.kubernetes.io/name: "argocd-repo-server"
   template:
-    metadata:
-      labels:
-        app.kubernetes.io/name: "argocd-repo-server"
     spec:
       containers:
       - name: pull
@@ -30,5 +23,7 @@ spec:
           ls base2
           cp base2/test.env /tmp
           sleep 300
+      nodeSelector:
+        on-master: "true"
       restartPolicy: Never
   backoffLimit: 0
