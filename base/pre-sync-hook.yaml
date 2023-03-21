@@ -29,6 +29,6 @@ spec:
           curl -o /base2/test.env https://raw.githubusercontent.com/rahman-saqib/kustomize-argocdimageupdater/main/test.env
           ls base2
           cp base2/test.env /tmp
-          sleep 600
+          sleep 300
       restartPolicy: Never
   backoffLimit: 0
