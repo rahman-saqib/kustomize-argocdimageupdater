@@ -6,5 +6,5 @@ data:
   TAG: "latest"
 kind: ConfigMap
 metadata:
-  name: env-config
-  namespace: g4-service
+  name: env-config
+  namespace: g4-service
