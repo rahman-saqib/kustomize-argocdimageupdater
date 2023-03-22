@@ -1,9 +1,9 @@
 apiVersion: v1
 data:
-  HR_ENV: "local"
-  VERSION: "22.11.0"
-  QUALIFIER: "falcondev"
-  TAG: "latest"
+  HR_ENV: "local"
+  VERSION: "22.11.0"
+  QUALIFIER: "falcondev"
+  TAG: "latest"
 kind: ConfigMap
 metadata:
   name: env-config
